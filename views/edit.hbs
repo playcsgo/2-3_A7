@@ -1,0 +1,53 @@
+<h1 class="ms-5">新增餐廳內容</h1>
+<div class="container m-5">
+  <form action="new" method="POST">
+    <div class="m-2">
+      <label for="name">餐廳名稱<span class="text-danger">*</span></label>
+      <input id="name" type="text" name="name" placeholder="三重台雞店.." required value="{{ restaurant.name }}">
+    </div>
+    <div class="m-2">
+      <label for="name_en">英文名稱</label>
+      <input id="name_en" type="text" name="name_en" placeholder="triple TSMC.." value="{{ restaurant.name_en }}">
+    </div>
+    <div class="m-2">
+      <label for="category">餐點類別<span class="text-danger">*</span></label>
+      <input id="category" list="categoryList" type="text" name="category" placeholder="衛生的迴轉壽司.." required value="{{ restaurant.category }}">
+        <datalist id="categoryList">
+          <option value="">台式</option>
+          <option value="">日式</option>
+          <option value="">咖啡</option>
+          <option value="">牛排</option>
+        </datalist>
+    </div>
+    <div class="m-2">
+      <label for="image">照片<span class="text-danger">*</span></label>
+      <input id="image" type="url" name="image" placeholder="http:#$*%&.." required value="{{ restaurant.image }}">
+    </div>
+    <div class="m-2">
+      <label for="location">地址<span class="text-danger">*</span></label>
+      <input id="location" type="text" name="location" placeholder="新北板橋.." required 
+      value="{{ restaurant.location }}">
+    </div>
+    <div class="m-2">
+      <label for="phone">電話<span class="text-danger">*</span></label>
+      <input id="phone" type="tel" name="phone" placeholder="79979.." required value="{{ restaurant.phone }}">
+    </div>
+    <div class="m-2">
+      <label for="google_map">地圖連結</label>
+      <input id="google_map" type="url" name="google_map" placeholder="http:#$*%&.." 
+      value="{{ restaurant.google_map }}">
+    </div>
+    <div class="m-2">
+      <label for="rating">評分<span class="text-danger">*</span></label>
+      <input id="rating" type="number" min="0" max="5" step="0.1" name="rating" placeholder="3.8.." required value="{{ restaurant.rating }}">
+    </div>
+    <div class="m-2">
+      <label for="description">敘述</label>
+      <input id="description" type="text" name="description" placeholder="不要問  問就是好雌.." value="{{ restaurant.description }}">
+    </div>
+    <div>
+      <a href="/"><button type="button" class="btn btn-danger">back</button></a>
+      <button type="submit" class="btn btn-info">Edit</button>
+    </div>
+  </form>
+</div>

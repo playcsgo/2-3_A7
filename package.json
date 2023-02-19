@@ -1,0 +1,25 @@
+{
+  "name": "a7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node models/seeder/restaurantSeeder.js"
+  },
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.7",
+    "mongoose": "^6.9.2",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
